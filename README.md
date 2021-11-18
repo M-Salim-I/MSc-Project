@@ -1,6 +1,6 @@
 # MSc Project - 170050601
 
-## AI-based method for objective clinical assessmentand grading of fibrosis in the bone marrow.
+## AI-based method for objective clinical assessment and grading of fibrosis in the bone marrow.
 
 Note: Source code as well as others will not run as they are tailored to a certain directory, all directories must be modified and created in order for the code to execute, especially when preprocessing the data i.e. extraction of the patches from the images which requires the user to create 60 image folders with images folder names from img1 to img63 skipping img51, img57, and img60 skipped as they run into an OpenSlide error for the image file being too large.
 
