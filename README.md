@@ -6,18 +6,24 @@ Note: Source code as well as others will not run as they are tailored to a certa
 
 ### Data Sheets & CSV files.
 - imgs_info.xlsx - contains the inforamtion about each image along with one of the sheets (imgs_df) used as a dataframe which is the csv file.
-- 
+- imgs_df.csv - contains the image number and its grade.
 
 ### Original images 
 The original images are stored in my scratch folder as well as in the USB. Permissions to acces these must be asked to Dr Hasan Rizvi (email: h.rizvi@qmul.ac.uk, hasan.rizvi@nhs.net)
 
 ### Files
 #### Datasets
-- X_patches.pickle, y_patches.pickle - are the patches dataset for the classification model.
+##### Segmentation
 - 
+##### Classification
+- X_patches.pickle, y_patches.pickle - are the patches dataset for the classification model.
+- X_balanaced_full_da.pickle, y_balanced_full_da.pickle - masks dataset that minimizes the dataset (i.e. Masks (minimized) in the paper).
+- X_g1_unbalanced.pickle, y_g1_unbalanced.pickle - masks dataset that minimizes all grades except for grade 1 (i.e. Masks (g1 unbalanced) in the paper).
+- X_test.pickle, y_test.pickle - contains the test set for the masks
+Note: no tests set for the patches as the the validation data determined it was not needed.
 #### Extraction of patches from the images
 - extract.py - shows the extraction and filtration of the discriminative patches from the images.
-- openslide.qsub - extracts the patches from the images using the Andrena cluster by submitting the job (this may take upto 24hrs to run).
+- openslide.qsub - extracts the patches from the images using the Andrena cluster by submitting the job (this may take upto/over 24hrs to run).
 #### Other files
 -  getting_dataset.ready.py - ensures the patches are ready to be fed
    into the models.
